@@ -1,7 +1,7 @@
 # Online Help Document
 
-- [中文版源码](https://github.com/xsky-fe/online-help/online-help-cn)
-- [英文版源码](https://github.com/xsky-fe/online-help/online-help-en)
+- [中文版源码](./tree/master/online-help-cn)
+- [英文版源码](./tree/master/online-help-en)
 
 ## 预览
 
