@@ -1,8 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/online-help-cn/node_modules
-/online-help-en/node_modules
+**/node_modules
 /.pnp
 .pnp.js
 
@@ -10,8 +9,8 @@
 /coverage
 
 # production
-/online-help-cn/_book
-/online-help-en/_book_en
+online-help-cn/_book
+online-help-en/_book_en
 
 # misc
 .DS_Store
