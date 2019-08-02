@@ -1,0 +1,65 @@
+{
+    "title": "XSCALEAR Online Help",
+    "description": "Online-help Document about XSCALEAR, aim to help people know more about XSCALEAR",
+    "language": "English",
+    "plugins": [
+        "favicon",
+        "versions",
+        "tbfed-pagefooter", 
+        "copy-code-button", 
+        "anchors", 
+        "-sharing",
+        "-lunr",
+        "-search",
+        "search-plus",
+        "search-title",
+        "custom-js-css",
+        "back-to-top-button",
+        "expandable-chapters-small",
+        "emphasize",
+        "splitter",
+        "popup",
+        "edit-link",
+        "hide-element"
+    ],
+    "styles": {
+        "website": "styles/website.css"
+    },
+
+    "pluginsConfig":{
+        "tbfed-pagefooter": {
+            "copyright": "Copyright &copy XSKY",
+            "modify_label": "This Document was Edit in：",
+            "modify_format": "YYYY-MM-DD HH:mm"
+        },
+        "custom-js-css": {
+            "js": [
+                "./assets/js/vendor/jquery/jquery-3.3.1.min.js",
+                "./assets/js/main.js"
+            ]
+        },
+        "versions": {
+            "type": "languages",
+            "options": [
+                {
+                    "value": "/zh-cn",
+                    "text": "中文"
+                },
+                {
+                    "value": "/en",
+                    "text": "English",
+                    "selected": true
+                }
+            ]
+        },
+        "favicon": {
+            "shortcut": "assets/images/favicon.ico",
+            "bookmark": "assets/images/favicon.ico",
+            "appleTouch": "assets/images/logo.png"
+        },
+        "edit-link": {
+            "base": "https://github.com/",
+            "label": "Edit this Page"
+        }
+    }
+}

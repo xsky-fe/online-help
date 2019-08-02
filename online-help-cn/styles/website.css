@@ -1,0 +1,91 @@
+.page-wrapper {
+  position: static;
+}
+.book-header {
+  box-shadow: 0 0.1875rem 0.125rem #efefef;
+}
+.book-langs-index {
+  width: 100%;
+  height: 100%;
+  padding: 40px 0;
+  margin: 0;
+  overflow: auto;
+}
+.book-langs-index .inner {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 3px;
+}
+
+.book-langs-index .inner .languages {
+  display: flex;
+  list-style: none;
+  padding: 20px 30px;
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+}
+.book-langs-index .inner .languages:after,
+.book-langs-index .inner .languages:before {
+  content: " ";
+  display: table;
+  line-height: 0;
+}
+.book-langs-index .inner .languages li {
+  width: 50%;
+  float: left;
+  padding: 10px 5px;
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+}
+
+/* search */
+
+/*
+    This CSS only styled the search results section, not the search input
+    It defines the basic interraction to hide content when displaying results, etc
+*/
+#book-search-input {
+  background: inherit;
+}
+#book-search-results .search-results {
+  display: none;
+}
+#book-search-results .search-results ul.search-results-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+#book-search-results .search-results ul.search-results-list li {
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  /* Highlight results */
+}
+#book-search-results .search-results ul.search-results-list li p em {
+  background-color: rgba(255, 220, 0, 0.4);
+  font-style: normal;
+}
+#book-search-results .search-results .no-results {
+  display: none;
+}
+#book-search-results.open .search-results {
+  display: block;
+}
+#book-search-results.open .search-noresults {
+  display: none;
+}
+#book-search-results.no-results .search-results .has-results {
+  display: none;
+}
+#book-search-results.no-results .search-results .no-results {
+  display: block;
+}
+#book-search-results span.search-highlight-keyword {
+  background: #ff0;
+}
+#book-search-results.search-plus .search-results .has-results .search-results-item {
+  color: inherit;
+}
