@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "markdown-pdf": "^9.0.0",
+    "through": "^2.3.8",
+    "through2": "^3.0.1"
+  }
+}
