@@ -1,5 +1,5 @@
 pipeline {
-    agent { node { label 'wizard' } }
+    agent any
 
     stages {
         stage('Prepare') {
