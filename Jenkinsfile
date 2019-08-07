@@ -28,10 +28,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'chmod +x build.sh && ./build.sh'
-                retry(2) {
-                    sh 'chmod +x build-book.sh && ./build-book.sh'
-                }
+                sh 'docker build --network="host" -t wizard-online-help . && docker tag wizard-online-help registry.xsky.com/xsky/wizard-online-help && docker push registry.xsky.com/xsky/wizard-online-help'
             }
         }
         stage('Delivery') {
