@@ -12,10 +12,12 @@
 requirements:
 
 - yarn
+- gitbook-cli
+- node
 
 ```
-chmod +x build.sh
-./build.sh
+chmod +x build_client.sh
+./build_client.sh
 ```
 ## nginx配置文件
 
