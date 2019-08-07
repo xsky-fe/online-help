@@ -1,9 +1,6 @@
 pipeline {
-    agent any
+    agent { node { label 'wizard' } }
 
-    environment {
-        DOCKER_HOST = 'tcp://localhost:2375'
-    }
     stages {
         stage('Prepare') {
             steps {
