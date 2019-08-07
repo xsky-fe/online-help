@@ -1,6 +1,7 @@
 pipeline {
     agent any
-    enviroment {
+
+    environment {
         DOCKER_HOST = 'tcp://localhost:2375'
     }
     stages {
@@ -33,10 +34,10 @@ pipeline {
                 sh './deliver.sh'
             }
         }
-        post {
-            always {
-                deleteDir()
-            }
+    }
+    post {
+        always {
+            deleteDir()
         }
     }
 }
