@@ -1,4 +1,4 @@
-#! /bin/zsh
+#!/bin/bash
 
 yarn global add gitbook-cli
 yarn install
