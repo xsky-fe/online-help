@@ -1,4 +1,5 @@
-#!/bin/bash
+
+#!/bin/bash 
 set -e
 
 remoteDir="/home/gitbuilder/gitbuilder.ceph.com/xsky-wizard-online-help/$REF_NAME"
