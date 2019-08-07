@@ -1,6 +1,6 @@
 #!/bin/sh
 
-yarn global add gitbook-cli
+yarn global add gitbook-cli --registry https://registry.npm.taobao.org/
 yarn install --registry https://registry.npm.taobao.org/
 cd ./online-help-cn
 gitbook install

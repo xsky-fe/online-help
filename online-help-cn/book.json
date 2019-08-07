@@ -18,8 +18,7 @@
         "emphasize",
         "splitter",
         "popup",
-        "edit-link",
-        "hide-element"
+        "edit-link"
     ],
     "styles": {
         "website": "styles/website.css"
