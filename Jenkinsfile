@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+        docker { 
+            image 'registry.xsky.com/xsky/node-alpine-git'
+            label 'wizard'
+        }
+    }
 
     stages {
         stage('Prepare') {
@@ -22,14 +27,11 @@ pipeline {
             }
         }
         stage('Build') {
-            agent {
-                docker { 
-                    image 'registry.xsky.com/xsky/node-alpine-git'
-                    label 'wizard'
-                }
-            }
             steps {
                 sh './build.sh'
+                retry(2) {
+                    sh './build-book.sh'
+                }
             }
         }
         stage('Delivery') {
