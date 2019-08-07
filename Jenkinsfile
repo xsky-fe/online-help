@@ -28,15 +28,15 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh './build.sh'
+                sh 'chmod +x build.sh && ./build.sh'
                 retry(2) {
-                    sh './build-book.sh'
+                    sh 'chmod +x build-book.sh && ./build-book.sh'
                 }
             }
         }
         stage('Delivery') {
             steps {
-                sh './deliver.sh'
+                sh 'chmod +x deliver.sh && ./deliver.sh'
             }
         }
     }
