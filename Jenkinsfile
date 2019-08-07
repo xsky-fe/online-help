@@ -22,6 +22,12 @@ pipeline {
             }
         }
         stage('Build') {
+            agent {
+                docker { 
+                    image 'registry.xsky.com/xsky/node-alpine-git'
+                    label 'wizard'
+                }
+            }
             steps {
                 sh './build.sh'
             }
