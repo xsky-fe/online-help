@@ -11,6 +11,7 @@
 # production
 **/_book
 **/_book_en
+**/dist
 
 # misc
 .DS_Store
