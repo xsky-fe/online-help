@@ -1,5 +1,9 @@
 pipeline {
-    agent { node { label 'wizard' } }
+    agent {
+        docker { 
+            image 'registry.xsky.com/xsky/node-alpine-git'
+        }
+    }
 
     stages {
         stage('Prepare') {
@@ -23,7 +27,10 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'docker build --network="host" -t wizard-online-help . && docker tag wizard-online-help registry.xsky.com/xsky/wizard-online-help && docker push registry.xsky.com/xsky/wizard-online-help'
+                sh 'chmod +x build.sh && ./build.sh'
+                retry(2) {
+                    sh 'chmod +x build-book.sh && ./build-book.sh'
+                }
             }
         }
         stage('Delivery') {
