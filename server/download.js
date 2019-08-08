@@ -34,7 +34,6 @@ function toPDF(dictionary, bookPath) {
                 linkify: true,
             },
             preProcessMd: preProcessMd,
-            cssPath: path.resolve(__dirname, '../online-help-cn/styles/pdf.css'),
         }).concat.from(cata).to(bookPath, function name() {
             console.log("done")
         })
