@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker { 
-            image 'registry.xsky.com/xsky/node-wheezy-git'
+            image 'registry.xsky.com/xsky/node-alpine-git'
         }
     }
 
